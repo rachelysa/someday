@@ -1,0 +1,30 @@
+.board-preview {
+    @include flex(space-between, center, row);
+    font-size: 1rem;
+    gap: 10px;
+    width: 100%;
+    padding-inline: 6px;
+    transition: 0.2s;
+    height: 32px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: rem(15px);
+
+    .texts {
+        @include flex(start, center, row);
+        gap: 8px;
+
+        input {
+            border: 1px dashed #c5c7d0;
+            border-radius: 3px;
+            font-size: rem(15px);
+            outline: none;
+            padding: 2px 0;
+            width: 70%;
+        }
+    }
+
+    &:hover {
+        background-color: #c5c7d0;
+    }
+}

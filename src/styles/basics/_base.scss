@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-size: 300px;
+    background-attachment: fixed;
+    font-family: Lato, serif;
+    height: 100vh;
+}
+
+#app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+}
+
+#nav {
+    padding: 30px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0 0 1rem;
+    font-weight: 600;
+}
+
+h1 {
+    font-size: em(46px);
+}
+
+p {
+    margin: 0 0;
+}
+
+img {
+    width: 100%;
+}
+
+a {
+    color: #253546;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.2s;
+
+    &:hover {
+        color: #6591c0;
+    }
+
+    &.router-link-exact-active {
+        color: $clr1;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(192, 192, 192);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(153, 153, 153);
+}

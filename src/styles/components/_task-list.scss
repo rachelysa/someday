@@ -1,0 +1,173 @@
+.task-list {
+    width: 100%;
+    margin-bottom: 40px;
+
+    .flip-list-enter,
+    .flip-list-leave-to {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+
+    .flip-list-enter-active,
+    .flip-list-leave-active {
+        transition: 0.5s;
+    }
+
+    .flip-list-move {
+        transition: 0.5s;
+    }
+
+    .ghost {
+        border-left: 5px solid #555;
+        background: #fbf6c8;
+        box-shadow: 10px 10px 5px -1px rgba(0, 0, 0, 0.14);
+        opacity: 0;
+        transition: transform 0.5s;
+    }
+
+    .sortable-drag {
+        opacity: 0;
+    }
+
+    .form {
+        position: relative;
+        left: 0;
+        width: 100%;
+        // margin-left: -7px;
+        opacity: 0.6;
+        transition: 0.2s;
+
+        &:focus-within {
+            opacity: 1;
+        }
+    }
+    .edit-input {
+        position: relative;
+        left: 0;
+        width: 100%;
+        margin-left: -7px;
+        opacity: 0.6;
+        transition: 0.2s;
+        border: 1px dashed #555;
+        padding: 0px 5px;
+        &:focus-within {
+            opacity: 1;
+        }
+    }
+
+    input {
+        &.add-input {
+            // margin-left: 22px;
+            width: 100%;
+        }
+
+        position: relative;
+        left: 0;
+        height: 35px;
+        width: 98.8%;
+
+        // box-shadow: 0 0 1px 1px #dbdbdb;
+        background: transparent;
+        outline: none;
+        border: none;
+
+        font-family: Lato;
+        font-size: 15px;
+        padding: 5px;
+    }
+    .style-task {
+        border-inline-start: 6px rgb(55, 55, 105) solid;
+        padding-inline-start: 5px;
+        font-size: 15px;
+
+        &.add-input {
+            border-inline: 1px solid #dbdbdb;
+        }
+    }
+
+    .summery-preview {
+        @include flex(start, center, row);
+        background-color: transparent;
+        margin: 2px 0;
+        height: 34px;
+        transition: 0.5s;
+        border-inline-end: 6px solid white;
+
+        .summery-title {
+            @include flex(space-between, center, row);
+            min-width: 260px;
+            padding-inline-end: 10px;
+            height: 100%;
+            min-width: 275px;
+            flex: 2;
+            border-inline-end: 1px white solid;
+            background-color: transparent;
+        }
+
+        .summery-cmps {
+            background-color: whitesmoke;
+            display: flex;
+            min-width: 300px;
+            align-items: center;
+
+            > * {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 180px;
+                height: 100%;
+                font-family: Lato;
+                font-size: 14px;
+            }
+
+            .summery-column {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: 600;
+                width: 180px;
+                height: 39px;
+                min-width: 75px;
+                transition: 0.3s;
+            }
+
+            .tag-summery {
+                div {
+                    font-size: rem(11px);
+                    color: rgb(random(255), random(255), random(255));
+                }
+
+                gap: 2px 5px;
+            }
+
+            .status-summery {
+                height: 30px;
+
+                .battery {
+                    display: flex;
+                    align-items: center;
+                    width: 90%;
+                    height: 90%;
+
+                    .done,
+                    .stuck,
+                    .in-progress,
+                    .empty {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        height: 90%;
+                        text-align: center;
+                        font-size: 12px;
+                        font-weight: 600;
+                        transition: 0.3s;
+
+                        &:hover {
+                            transform: scale(110%, 110%);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

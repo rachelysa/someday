@@ -1,0 +1,62 @@
+.el-drawer__open .el-drawer.rtl {
+    box-shadow: 0 0 3px 3px #333;
+    width: 30%;
+}
+
+.el-drawer__header {
+    text-align: left;
+    font-weight: 900;
+    font-family: Roboto;
+    font-size: rem(22px);
+    color: #333;
+}
+
+.el-tabs__header {
+    padding-inline: 10px;
+    .el-tabs__nav-wrap {
+        padding-inline-start: 5px;
+        font-family: Lato;
+
+        .el-tabs__item {
+            font-weight: 600;
+        }
+    }
+}
+
+.activity-preview {
+    // @include flex(space-between);
+    border: none;
+    outline: none;
+    box-shadow: none;
+    border-bottom: 1px solid rgb(182, 182, 182);
+    gap: 10px;
+    margin: 0 10px;
+    margin-bottom: 10px;
+    text-align: left;
+
+    .activity-card {
+        border: none;
+        box-shadow: none;
+        outline: none;
+        .el-card__body {
+            font-family: Lato-Light;
+            font-weight: 600;
+            font-size: rem(14px);
+
+            div {
+                float: left;
+                margin-right: 20px;
+            }
+        }
+    }
+
+    div {
+        flex: 1;
+    }
+}
+
+@media (max-width: $break-wide) {
+    .el-drawer__open .el-drawer.rtl {
+        width: 50%;
+    }
+}

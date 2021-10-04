@@ -1,0 +1,11 @@
+.status-item{
+    width: 100%;
+    height: 2rem;
+    padding: .3rem;
+    color: whitesmoke;
+    font-weight: 600;
+
+    &:hover {
+        opacity: .6;
+    }
+}

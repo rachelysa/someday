@@ -1,0 +1,30 @@
+.status-picker {
+    position: absolute;
+    top: 2.2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: whitesmoke;
+    border: 1px solid lightgray;
+    box-shadow: 4px 4px 6px -3px rgba(0, 0, 0, 0.26);
+    gap: 5px;
+    padding: 0.3rem;
+    transition: 0.2s;
+    z-index: 2;
+}
+
+// Vue transitions
+
+.status-picker-enter,
+.status-picker-leave-to {
+    opacity: 0;
+}
+
+.status-picker-enter-active,
+.status-picker-leave-active {
+    transition: opacity 0.2s ease-in;
+}

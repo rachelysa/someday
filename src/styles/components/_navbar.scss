@@ -1,0 +1,107 @@
+.navbar {
+    @include flex(space-between, start, column);
+    background-color: #2b2f4c;
+    width: 66px;
+    padding: 20px 0;
+    height: 100vh;
+    .task-action {
+        .logo-monday {
+            width: 30px;
+        }
+    }
+    .task-action,
+    .user-action {
+        @include flex(center, center, column);
+
+        .fas {
+            font-size: 15px;
+        }
+
+        gap: 10px;
+        margin: 0 auto;
+        a {
+            @include flex(center, center, row);
+
+            height: 50px;
+            width: 50px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 1s;
+            color: white;
+            &:hover {
+                background-color: #141416;
+            }
+        }
+        .router-link-exact-active {
+            &::before {
+                border-width: 8px 6px 8px 0;
+            }
+            //your desired design when link is clicked
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+    }
+    .user-details {
+        background-color: #03c874;
+        width: 190px;
+        color: #fff;
+        font-size: 15px;
+        font-weight: 600;
+        border-radius: 0 0 16px 16px;
+        transform: rotate(-90deg) translateY(-85px);
+        padding: 20px 10px 10px;
+        cursor: pointer;
+        transition: 0.3s;
+        &:hover {
+            transform: rotate(-90deg) translateY(-75px);
+        }
+    }
+    .btn-logout {
+        height: 50px;
+        width: 50px;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        color: white;
+    }
+}
+
+@media (max-width: $break-wide) {
+    .navbar {
+        width: 40px;
+
+        .user-details {
+            width: 150px;
+            transform: rotate(-90deg) translateY(-70px);
+        }
+
+        .task-action,
+        .user-action {
+            display: flex;
+            gap: 30px;
+            width: 40px;
+            a {
+                @include flex(center, center, row);
+                padding: 15px;
+                // height: 20px;
+                // width: 20px;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: 1s;
+                color: white;
+            }
+
+            .router-link-exact-active {
+                &::before {
+                    border-width: none;
+                }
+                //your desired design when link is clicked
+                background-color: transparent;
+            }
+        }
+    }
+    img,
+    i {
+        width: 20px;
+        height: 20px;
+    }
+}

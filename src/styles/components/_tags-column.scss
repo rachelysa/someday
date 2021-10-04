@@ -1,0 +1,15 @@
+.tags-column .el-input__inner {
+    box-shadow: none;
+    text-align: center;
+}
+.tags-column .el-select__input {
+    box-shadow: none;
+    text-align: center;
+}
+.tags-column .el-tag {
+    text-align: center;
+    background-color: #e4e4e4;
+    border: 1px solid rgb(190, 190, 190);
+    font-weight: 600;
+    color: rgb(random(255), random(255), random(255));
+}

@@ -1,0 +1,13 @@
+.login-signup {
+    .el-tabs {
+        .el-tabs__content {
+            display: flex;
+            text-align: left;
+        }
+    }
+}
+.el-dialog {
+    width: 400px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px 9px #ff61241f;
+}

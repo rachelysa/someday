@@ -1,0 +1,36 @@
+.person-column {
+    position: relative;
+    width: 250px;
+    border-radius: 8px;
+
+    .empty-delegate-list {
+        color: rgb(224, 224, 224);
+        font-size: 23px;
+        transition: 0.2s;
+
+        &:hover {
+            color: rgba(79, 79, 209, 0.623);
+        }
+    }
+
+    .avatar-list {
+        @include flex;
+        // margin: 0 auto;
+
+        div {
+            // margin: 0 auto;
+            // height: 27px;
+            font-weight: 600;
+            margin-inline: -2.5px;
+        }
+
+        .vue-avatar--wrapper {
+            span {
+                font-weight: 600;
+                font-family: Lato;
+                font-size: 12px;
+                color: rgb(117, 117, 117);
+            }
+        }
+    }
+}

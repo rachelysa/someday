@@ -1,0 +1,42 @@
+.msg-preview{ 
+    position: relative;
+    @include flex(start,start,column);
+    width: 90%;
+    gap:20px;
+    height: 180px;
+    margin: auto;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #b2b2b2;
+    color: rgb(124, 124, 136);
+    border-radius: 5px;
+    .msg-header{
+        font-size: 18px;
+       
+        @include flex(start);
+        gap: 10px;
+    }
+    .msg-footer{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        @include flex;
+        width: 100%;
+        button{
+            height: 30px;
+            width: 50%;
+            background-color: transparent;
+            border: none;
+            &:first-child{
+                border-right:  1px solid #b2b2b2;
+            }
+            border-top: 1px solid #b2b2b2;
+            cursor: pointer;
+            transition: 1s;
+            &:hover{
+                background-color: rgb(207, 207, 207);
+            }
+        }
+    }
+ 
+}

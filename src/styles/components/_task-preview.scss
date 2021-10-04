@@ -1,0 +1,109 @@
+.task-preview {
+    @include flex(start, center, row);
+    background-color: whitesmoke;
+    margin: 2px 0;
+    height: 34px;
+    transition: 0.5s;
+    position: relative;
+    // margin-left: 32px;
+    // padding-inline-start: 5px;
+
+    // &:hover .dropdown {
+    //     display: block;
+    // }
+
+    .dropdown {
+        position: absolute;
+        left: -35px;
+        display: none;
+        .el-button {
+            width: 30px;
+            height: 34px;
+            @include flex(center, center, row);
+            border: none;
+            border-radius: 50%;
+            margin: 0;
+            color: rgb(194, 194, 194);
+            padding: 2px;
+            background-color: transparent;
+            margin-right: 15px;
+            padding: 0;
+            border-radius: 50%;
+        }
+        &:focus-within {
+            display: block;
+        }
+    }
+    &:hover:not(.ghost) .dropdown {
+        display: block;
+    }
+
+    .date-picker .el-input__inner {
+        box-shadow: none;
+    }
+
+    .open-chat {
+        cursor: pointer;
+        transition: 0.3s;
+        color: rgb(161, 161, 161);
+        font-size: 18px;
+        &:hover {
+            color: rgb(45, 113, 223);
+        }
+    }
+    .task-title {
+        @include flex(space-between, center, row);
+        min-width: 260px;
+        padding-inline-end: 10px;
+        height: 100%;
+        min-width: 275px;
+        flex: 2;
+        border-inline-end: 1px white solid;
+        cursor: grab;
+
+        .title-task {
+            @include flex(start, center, row);
+            gap: 10px;
+            button {
+                border: none;
+                background-color: transparent;
+                cursor: pointer;
+                height: 25px;
+                width: 40px;
+                border-radius: 5px;
+                transition: 0.5s;
+
+                font-family: lato;
+                color: gray;
+                &:hover {
+                    background-color: rgb(253, 252, 252);
+                }
+            }
+        }
+    }
+    .dynamic-column {
+        @include flex(center, center);
+        width: 180px;
+        height: 100%;
+        // flex: 1;
+        min-width: 75px;
+        cursor: pointer;
+        border-inline-end: 1px white solid;
+    }
+    &:hover {
+        background-color: rgb(230, 230, 230);
+    }
+
+    .status-column:after {
+        position: absolute;
+        content: '';
+        right: 0;
+        top: 0;
+    }
+
+    .status-column:hover:after {
+        transition-duration: 0.5s;
+        border-bottom: 10px solid rgb(145, 145, 145);
+        border-right: 10px solid white;
+    }
+}
